@@ -6,53 +6,6 @@ import Navbar from "@/components/Navigation";
 import {ArrowRight, BookOpen, Brain, Calendar, Github, Search, Shield, Sparkles, TrendingUp} from 'lucide-react';
 import {HoverBorderGradient} from "@/components/ui/hover-border-gradient.tsx";
 
-const quotes = [
-    {
-        text: "Dreams are the royal road to the unconscious.",
-        author: "Sigmund Freud"
-    },
-    {
-        text: "All that we see or seem is but a dream within a dream.",
-        author: "Edgar Allan Poe"
-    },
-    {
-        text: "The future belongs to those who believe in the beauty of their dreams.",
-        author: "Eleanor Roosevelt"
-    }
-];
-const features = [
-    {
-        icon: BookOpen,
-        title: "Intelligent Dream Journal",
-        description: "AI-powered analysis helps you discover patterns and meanings in your dreams with scientific precision."
-    },
-    {
-        icon: Brain,
-        title: "Psychological Insights",
-        description: "Built on decades of dream research, unlock the psychological significance of your subconscious mind."
-    },
-    {
-        icon: TrendingUp,
-        title: "Dream Analytics",
-        description: "Visualize trends, emotions, and recurring themes with beautiful charts and intuitive insights."
-    },
-    {
-        icon: Calendar,
-        title: "Sleep Cycle Integration",
-        description: "Connect dream quality with sleep patterns for a holistic understanding of your rest."
-    },
-    {
-        icon: Search,
-        title: "Symbol Dictionary",
-        description: "Explore comprehensive dream symbol meanings based on psychological and cultural research."
-    },
-    {
-        icon: Shield,
-        title: "Privacy First",
-        description: "Your dreams remain completely private with end-to-end encryption and local storage options."
-    }
-];
-
 export function LandingPage() {
     const containerRef = useRef(null);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -160,11 +113,16 @@ export function LandingPage() {
                                 className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-2xl blur-2xl"/>
                             <div
                                 className="relative bg-slate-900/50 backdrop-blur-xl rounded-2xl border border-white/10 p-2 shadow-2xl">
-                                <iframe width="560" height="315"
-                                        src="https://www.youtube.com/embed/VvUGPZ2WhMk?si=ydmGPr244QMJWTl-"
-                                        title="YouTube video player" frameBorder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                                {/*<iframe width="560" height="315"*/}
+                                {/*        src="https://www.youtube.com/embed/VvUGPZ2WhMk?si=ydmGPr244QMJWTl-"*/}
+                                {/*        title="YouTube video player" frameBorder="0"*/}
+                                {/*        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"*/}
+                                {/*        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>*/}
+                                <img
+                                    src="https://images.unsplash.com/photo-1644088379091-d574269d422f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRlY2hub2xvZ3klMjBuZXR3b3JrfGVufDF8fHx8MTc2NDMxODE1M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                                    alt="Workflow visualization"
+                                    className="rounded-lg w-full"
+                                />
                             </div>
                         </motion.div>
                     </div>
