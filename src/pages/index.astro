@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GradualBlur from "../components/GradualBlur";
+import {LandingPage} from "../components/LandingPage";
+
+---
+
+<Layout title="Fusionize | Open Agent Orchestration Framework for AI, APIs, and Workflows" description="Fusionize gives developers a flexible, open Apache-licensed framework to build AI agents, toolchains, BPMN-style flows, and stateful automations. Integrate LLMs, tools, and services with full transparency and control."
+>
+	<section style={{position: 'relative',height: 500,overflow: 'hidden'}}>
+		<GradualBlur client:load
+					 target="parent"
+					 position="top"
+					 height="99px"
+					 strength={2}
+					 divCount={5}
+					 curve="bezier"
+					 zIndex={49}
+					 exponential={true}
+					 opacity={1}
+		/>
+		<LandingPage client:load></LandingPage>
+		<GradualBlur client:load
+					 target="parent"
+					 position="bottom"
+					 height="6rem"
+					 strength={2}
+					 divCount={5}
+					 curve="bezier"
+					 exponential={true}
+					 opacity={1}
+		/>
+	</section>
+</Layout>

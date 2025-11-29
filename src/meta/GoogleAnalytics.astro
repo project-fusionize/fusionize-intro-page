@@ -1,0 +1,11 @@
+---
+const attrs = { type: "text/partytown" };
+const gtagId = `${import.meta.env.GA_TAG}`;
+---
+<script async src=`https://www.googletagmanager.com/gtag/js?id=${gtagId}` {...attrs}></script>
+<script is:inline define:vars={{ gtagId }} {...attrs}>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', gtagId);
+</script>
